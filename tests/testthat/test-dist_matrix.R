@@ -2,7 +2,7 @@ context("Compute Functional Distance Matrix")
 
 test_that("Returned object is a matrix", {
 
-  trait_df = data.frame(1:5, letters[1:5])
+  trait_df = data.frame(1:5, letters[1:5], stringsAsFactors = FALSE)
   rownames(trait_df) = letters[1:5]
 
   # Object is matrix
@@ -12,7 +12,8 @@ test_that("Returned object is a matrix", {
 
 test_that("Names in distance matrix named after rownames", {
   trait = data.frame(sp = paste("sp", 1:5), trait_1 = 1:5,
-                     trait_2 = as.factor(c("A", "A", "A", "B", "B")))
+                     trait_2 = as.factor(c("A", "A", "A", "B", "B")),
+                     stringsAsFactors = FALSE)
 
 
   # No rownames
@@ -33,7 +34,8 @@ test_that("Names in distance matrix named after rownames", {
 test_that("Distance matrix contains good values", {
 
   trait = data.frame(sp = paste("sp", 1:5), trait_1 = 1:5,
-                     trait_2 = as.factor(c("A", "A", "A", "B", "B")))
+                     trait_2 = as.factor(c("A", "A", "A", "B", "B")),
+                     stringsAsFactors = FALSE)
 
   rownames(trait) = trait$sp
 
