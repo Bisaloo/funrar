@@ -218,7 +218,8 @@ test_that("Di is undefined for a community with a single species", {
     data.frame(col   = rep(c("a", "b"), 2),
                row   = rep(c("s1", "s2"), each = 2),
                value = c(1, 0, 0, 1),
-               Di    = c(NaN, NA, NA, NaN)))
+               Di    = c(NaN, NA, NA, NaN),
+               stringsAsFactors = FALSE))
 })
 
 
