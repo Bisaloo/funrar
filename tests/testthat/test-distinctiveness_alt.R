@@ -62,7 +62,7 @@ test_that("Bad input generates error", {
                "'given_range' argument should be non-null and numeric")
 
   expect_warning(
-    distinctiveness_range(valid_mat * 4, dist_mat, 0.1),
+    distinctiveness_alt(valid_mat * 4, dist_mat, 0.1),
     paste0("Provided object may not contain relative abundances nor ",
            "presence-absence\n",
            "Have a look at the make_relative() function if it is the case"),

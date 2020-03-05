@@ -29,6 +29,11 @@ test_that("Restrictedness computations work", {
                           "Ri" = c(3/4, 1/4, 1/4, 1/2)))
 
   # With relative restrictedness
+
+  expect_equal(restrictedness_stack(com_df, "species", "site", relative = TRUE),
+               data.frame("species" = letters[1:4],
+                          "Ri" = c(1, 1/3, 1/3, 2/3)))
+
   expect_equal(restrictedness(valid_mat, relative = TRUE),
                data.frame("species" = letters[1:4],
                           "Ri" = c(1, 1/3, 1/3, 2/3)))
