@@ -6,7 +6,8 @@
 
 ## BUG FIX
 
-* Fix tests that used `data.frame()` now with explicit `stringAsFactors = FALSE` for compatibility with R 4.0.0
+* Fix tests that used `data.frame()` now with explicit `stringAsFactors` values for compatibility with R 4.0.0
+* Add missing tests on bad inputs for some functions
 
 # funrar 1.3.1
 
