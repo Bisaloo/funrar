@@ -27,6 +27,11 @@ test_that("Restrictedness computations work", {
   expect_equal(restrictedness(valid_mat),
                data.frame("species" = letters[1:4],
                           "Ri" = c(3/4, 1/4, 1/4, 1/2)))
+
+  # With relative restrictedness
+  expect_equal(restrictedness(valid_mat, relative = TRUE),
+               data.frame("species" = letters[1:4],
+                          "Ri" = c(1, 1/3, 1/3, 2/3)))
 })
 
 test_that("Restrictedness works with sparse matrices", {
@@ -39,3 +44,4 @@ test_that("Restrictedness works with sparse matrices", {
                     data.frame("species" = letters[1:4],
                                "Ri" = c(3/4, 1/4, 1/4, 1/2)))
 })
+
